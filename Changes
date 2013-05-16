@@ -1,0 +1,5 @@
+Revision history for Perl extension XML::Parser::Lite.
+
+0.717  Thu May 16 01:18:25 2013
+	- forked from SOAP::Lite 0.716
+
