@@ -249,7 +249,7 @@ XML::Parser::Lite - Lightweight regexp-based XML parser
 
 This Perl implements an XML parser with a interface similar to
 XML::Parser. Though not all callbacks are supported, you should be able to
-use it in the same way you use XML::Parser. Due to using experimantal regexp
+use it in the same way you use XML::Parser. Due to using experimental regexp
 features it'll work only on Perl 5.6 and above and may behave differently on
 different platforms.
 
@@ -264,7 +264,7 @@ not re-entrant).
 Constructor.
 
 As (almost) all SOAP::Lite constructors, new() returns the object called on
-when called as object method. This means that the following effectifely is
+when called as object method. This means that the following effectively is
 a no-op if $obj is a object:
 
  $obj = $obj->new();
