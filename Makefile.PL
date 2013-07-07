@@ -10,5 +10,10 @@ WriteMakefile(
     VERSION_FROM  => 'lib/XML/Parser/Lite.pm',
     PREREQ_PM     => { 'SOAP::Lite' => 0.716 },
     ABSTRACT_FROM => 'lib/XML/Parser/Lite.pm',
-    AUTHOR        => 'Byrne Reese (byrne@majordojo.com)'
+    AUTHOR        => 'Byrne Reese (byrne@majordojo.com)',
+    META_MERGE        => {
+        resources => {
+            repository  =>  'https://github.com/redhotpenguin/perl-XML-Parser-Lite',
+        },
+    },
 );
