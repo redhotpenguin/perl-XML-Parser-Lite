@@ -1,5 +1,9 @@
 Revision history for Perl extension XML::Parser::Lite.
 
+0.718 Tue Nov 26 2013
+    - add skips for some dependencies
+    - https://rt.cpan.org/Ticket/Display.html?id=87604
+
 0.717  Thu May 16 01:18:25 2013
 	- forked from SOAP::Lite 0.716
 
