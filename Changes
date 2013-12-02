@@ -1,5 +1,8 @@
 Revision history for Perl extension XML::Parser::Lite.
 
+0.719 Mon Dec 2 2013
+    - RT 90873 - restore test suite
+
 0.718 Tue Nov 26 2013
     - add skips for some dependencies
     - https://rt.cpan.org/Ticket/Display.html?id=87604
