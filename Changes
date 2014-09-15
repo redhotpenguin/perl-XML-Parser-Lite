@@ -1,5 +1,9 @@
 Revision history for Perl extension XML::Parser::Lite.
 
+0.720 Mon Sep 15 2014
+    - RT 96206 - add README
+    - RT 96209 - add links to other parsers
+
 0.719 Mon Dec 2 2013
     - RT 90873 - restore test suite
 

@@ -344,6 +344,12 @@ cleanup here.
 
  XML::Parser
 
+ XML::Parser::LiteCopy: a fork in XML::Parser::Lite::Tree
+
+ YAX
+
+ XML::Parser::REX: the almost original REX code
+
 =head1 COPYRIGHT
 
 Copyright (C) 2000-2007 Paul Kulchenko. All rights reserved.
