@@ -1,40 +1,129 @@
-Xpl version 0.01
-================
+NAME
+    XML::Parser::Lite - Lightweight regexp-based XML parser
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+SYNOPSIS
+      use XML::Parser::Lite;
 
-A README file is required for CPAN modules since CPAN extracts the
-README file from a module distribution so that people browsing the
-archive can use it get an idea of the modules uses. It is usually a
-good idea to provide version information here so that people can
-decide whether fixes for the module are worth downloading.
+      $p1 = new XML::Parser::Lite;
+      $p1->setHandlers(
+        Start => sub { shift; print "start: @_\n" },
+        Char => sub { shift; print "char: @_\n" },
+        End => sub { shift; print "end: @_\n" },
+      );
+      $p1->parse('<foo id="me">Hello World!</foo>');
 
-INSTALLATION
+      $p2 = new XML::Parser::Lite
+        Handlers => {
+          Start => sub { shift; print "start: @_\n" },
+          Char => sub { shift; print "char: @_\n" },
+          End => sub { shift; print "end: @_\n" },
+        }
+      ;
+      $p2->parse('<foo id="me">Hello <bar>cruel</bar> World!</foo>');
 
-To install this module type the following:
+DESCRIPTION
+    This Perl implements an XML parser with a interface similar to
+    XML::Parser. Though not all callbacks are supported, you should be able
+    to use it in the same way you use XML::Parser. Due to using experimental
+    regexp features it'll work only on Perl 5.6 and above and may behave
+    differently on different platforms.
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+    Note that you cannot use regular expressions or split in callbacks. This
+    is due to a limitation of perl's regular expression implementation
+    (which is not re-entrant).
 
-DEPENDENCIES
+SUBROUTINES/METHODS
+  new
+    Constructor.
 
-This module requires these other modules and libraries:
+    As (almost) all SOAP::Lite constructors, new() returns the object called
+    on when called as object method. This means that the following
+    effectively is a no-op if $obj is a object:
 
-  blah blah blah
+     $obj = $obj->new();
 
-COPYRIGHT AND LICENCE
+    New accepts a single named parameter, "Handlers" with a hash ref as
+    value:
 
-Put the correct copyright and licence information here.
+     my $parser = XML::Parser::Lite->new(
+        Handlers => {
+            Start => sub { shift; print "start: @_\n" },
+            Char => sub { shift; print "char: @_\n" },
+            End => sub { shift; print "end: @_\n" },
+        }
+     );
 
-Copyright (C) 2013 by Fred Moyer
+    The handlers given will be passed to setHandlers.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.16.1 or,
-at your option, any later version of Perl 5 you may have available.
+  setHandlers
+    Sets (or resets) the parsing handlers. Accepts a hash with the handler
+    names and handler code references as parameters. Passing "undef" instead
+    of a code reference replaces the handler by a no-op.
 
+    The following handlers can be set:
+
+     Init
+     Start
+     Char
+     End
+     Final
+
+    All other handlers are ignored.
+
+    Calling setHandlers without parameters resets all handlers to no-ops.
+
+  parse
+    Parses the XML given. In contrast to XML::Parser's parse method, parse()
+    only parses strings.
+
+Handler methods
+  Init
+    Called before parsing starts. You should perform any necessary
+    initializations in Init.
+
+  Start
+    Called at the start of each XML node. See XML::Parser for details.
+
+  Char
+    Called for each character sequence. May be called multiple times for the
+    characters contained in an XML node (even for every single character).
+    Your implementation has to make sure that it captures all characters.
+
+  End
+    Called at the end of each XML node. See XML::Parser for details
+
+  Comment
+    See XML::Parser for details
+
+  XMLDecl
+    See XML::Parser for details
+
+  Doctype
+    See XML::Parser for details
+
+  Final
+    Called at the end of the parsing process. You should perform any
+    necessary cleanup here.
+
+SEE ALSO
+     XML::Parser
+
+COPYRIGHT
+    Copyright (C) 2000-2007 Paul Kulchenko. All rights reserved.
+
+    Copyright (C) 2008- Martin Kutter. All rights reserved.
+
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
+    This parser is based on "shallow parser"
+    http://www.cs.sfu.ca/~cameron/REX.html Copyright (c) 1998, Robert D.
+    Cameron.
+
+AUTHOR
+    Paul Kulchenko (paulclinger@yahoo.com)
+
+    Martin Kutter (martin.kutter@fen-net.de)
+
+    Additional handlers supplied by Adam Leggett.
 
