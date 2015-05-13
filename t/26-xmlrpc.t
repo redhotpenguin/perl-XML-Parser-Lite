@@ -25,7 +25,7 @@ SKIP: {
     $r = $s->test_connection;
 
     unless ( defined $r && defined $r->envelope ) {
-        skip 'need XMLRPC::Lite', 8 if $@;
+        skip 'need XMLRPC::Lite', 6 if $@;
         print "1..0 # Skip: ", $s->transport->status, "\n";
         exit;
     }
