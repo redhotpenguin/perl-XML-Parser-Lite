@@ -4,6 +4,9 @@ evision history for Perl module XML::Parser::Lite
     - Developer release (with PHRED's permission) to test changes
     - Specified min perl version of 5.006 in Lite.pm and dist metadata
     - Fixed RT#98635 - skip the planned number of tests
+    - Changed copyright to refer to XML::Parser::Lite rather than SOAP::Lite
+      (XML::Parser::Lite was forked from SOAP::Lite - see 0.717 below).
+      RT#92756
     - Updated this file (Changes) to follow CPAN::Changes::Spec
 
 0.720 2014-09-15 PHRED

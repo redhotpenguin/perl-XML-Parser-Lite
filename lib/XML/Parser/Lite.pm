@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2000-2007 Paul Kulchenko (paulclinger@yahoo.com)
 # Copyright (C) 2008 Martin Kutter (martin.kutter@fen-net.de)
-# SOAP::Lite is free software; you can redistribute it
+# XML::Parser::Lite is free software; you can redistribute it
 # and/or modify it under the same terms as Perl itself.
 #
 # ======================================================================
@@ -262,8 +262,10 @@ not re-entrant).
 
 Constructor.
 
-As (almost) all SOAP::Lite constructors, new() returns the object called on
-when called as object method. This means that the following effectively is
+The new() method returns the object called on when called as object method.
+This behaviour was inherited from L<SOAP::Lite>,
+which XML::Parser::Lite was split out from.
+This means that the following effectively is
 a no-op if $obj is a object:
 
  $obj = $obj->new();
