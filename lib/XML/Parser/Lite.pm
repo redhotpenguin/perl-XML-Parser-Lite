@@ -9,10 +9,11 @@
 
 package XML::Parser::Lite;
 
+use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.721';
+our $VERSION = '0.720_01';
 
 sub new {
     my $class = shift;

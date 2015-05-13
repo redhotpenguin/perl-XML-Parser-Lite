@@ -1,6 +1,8 @@
 Revision history for Perl module XML::Parser::Lite
 
-0.721 2015-05-?? PHRED
+0.720_01 2015-05-13 NEILB
+    - Developer release (with PHRED's permission) to test changes
+    - Specified min perl version of 5.006 in Lite.pm and dist metadata
     - Updated this file (Changes) to follow CPAN::Changes::Spec
 
 0.720 2014-09-15 PHRED
