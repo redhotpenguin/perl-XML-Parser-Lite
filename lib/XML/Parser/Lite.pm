@@ -221,7 +221,7 @@ __END__
 
 =head1 NAME
 
-XML::Parser::Lite - Lightweight regexp-based XML parser
+XML::Parser::Lite - Lightweight pure-perl XML Parser (based on regexps)
 
 =head1 SYNOPSIS
 
@@ -246,8 +246,8 @@ XML::Parser::Lite - Lightweight regexp-based XML parser
 
 =head1 DESCRIPTION
 
-This Perl implements an XML parser with a interface similar to
-XML::Parser. Though not all callbacks are supported, you should be able to
+This module implements an XML parser with a interface similar to
+L<XML::Parser>. Though not all callbacks are supported, you should be able to
 use it in the same way you use XML::Parser. Due to using experimental regexp
 features it'll work only on Perl 5.6 and above and may behave differently on
 different platforms.
@@ -345,13 +345,14 @@ cleanup here.
 
 =head1 SEE ALSO
 
- XML::Parser
+L<XML::Parser> - a full-blown XML Parser, on which XML::Parser::Lite is based.
+Requires a C compiler and the I<expat> XML parser.
 
- XML::Parser::LiteCopy: a fork in XML::Parser::Lite::Tree
+L<XML::Parser::LiteCopy> - a fork in L<XML::Parser::Lite::Tree>.
 
- YAX
+L<YAX> - another pure-perl module for XML parsing.
 
- XML::Parser::REX: the almost original REX code
+L<XML::Parser::REX> - another module that parses XML with regular expressions.
 
 =head1 COPYRIGHT
 
@@ -362,7 +363,8 @@ Copyright (C) 2008- Martin Kutter. All rights reserved.
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
-This parser is based on "shallow parser" http://www.cs.sfu.ca/~cameron/REX.html
+This parser is based on "shallow parser"
+L<http://www.cs.sfu.ca/~cameron/REX.html>
 Copyright (c) 1998, Robert D. Cameron.
 
 =head1 AUTHOR

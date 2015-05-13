@@ -11,6 +11,8 @@ evision history for Perl module XML::Parser::Lite
     - Changed copyright to refer to XML::Parser::Lite rather than SOAP::Lite
       (XML::Parser::Lite was forked from SOAP::Lite - see 0.717 below).
       RT#92756
+    - Doc tweaks: improved abstract, first paragraph of DESCRIPTION
+      and the SEE ALSO section.
     - Added license type 'perl' to dist metadata, to match the doc.
     - Updated this file (Changes) to follow CPAN::Changes::Spec
 
