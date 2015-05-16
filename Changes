@@ -1,11 +1,10 @@
-evision history for Perl module XML::Parser::Lite
+Revision history for Perl module XML::Parser::Lite
 
-0.720_01 2015-05-13 NEILB
+0.721 2015-05-?? PHRED
     - Developer release (with PHRED's permission) to test changes
     - Refactored t/37-mod_xmlrpc.t to make the modules it uses optional,
       using Test::Requires. RT#91434
-    - Specified required versions of XMLRPC::Lite and XMLRPC::Test.
-      GH#4
+    - Specified required versions of XMLRPC::Lite and XMLRPC::Test. GH#4
     - Specified min perl version of 5.006 in Lite.pm and dist metadata
     - Fixed RT#98635 - skip the planned number of tests
     - Changed copyright to refer to XML::Parser::Lite rather than SOAP::Lite
@@ -17,6 +16,9 @@ evision history for Perl module XML::Parser::Lite
       and the SEE ALSO section.
     - Added license type 'perl' to dist metadata, to match the doc.
     - Updated this file (Changes) to follow CPAN::Changes::Spec
+
+0.720_01 2015-05-13 NEILB
+    - Developer release with all the changes subsequently released in 0.721.
 
 0.720 2014-09-15 PHRED
     - RT 96206 - add README
