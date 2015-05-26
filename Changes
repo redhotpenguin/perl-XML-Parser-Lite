@@ -1,6 +1,6 @@
 Revision history for Perl module XML::Parser::Lite
 
-0.721 2015-05-?? PHRED
+0.721 2015-05-26 PHRED
     - Developer release (with PHRED's permission) to test changes
     - Refactored t/37-mod_xmlrpc.t to make the modules it uses optional,
       using Test::Requires. RT#91434
