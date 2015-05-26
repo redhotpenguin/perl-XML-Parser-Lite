@@ -5,15 +5,10 @@ use warnings;
 
 use Test::More;
 
-BEGIN { plan tests => 17 }
+use Test::Requires {
+    'XMLRPC::Lite' => 0.717,
+    'XMLRPC::Test' => 0.717,
+};
 
-eval { require XMLRPC::Lite };
-
-SKIP: {
-
-    skip 'need XMLRPC::Lite', 17 if $@;
-
-    XMLRPC::Test::Server::run_for( shift || 'http://localhost/mod_xmlrpc' );
-
-}
+XMLRPC::Test::Server::run_for( shift || 'http://localhost/mod_xmlrpc' );
 
