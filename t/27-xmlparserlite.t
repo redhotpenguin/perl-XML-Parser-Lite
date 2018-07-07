@@ -1,4 +1,4 @@
-#!/bin/env perl 
+#!/bin/env perl
 
 BEGIN {
     unless(grep /blib/, @INC) {
@@ -12,7 +12,7 @@ use diagnostics;
 use Test;
 
 unless (eval { require XML::Parser::Lite }) {
-    print "1..0 # Skip: ", $@, "\n"; 
+    print "1..0 # Skip: ", $@, "\n";
     exit;
 }
 
