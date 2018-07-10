@@ -358,7 +358,9 @@ L<XML::Parser::REX> - another module that parses XML with regular expressions.
 
 Copyright (C) 2000-2007 Paul Kulchenko. All rights reserved.
 
-Copyright (C) 2008- Martin Kutter. All rights reserved.
+Copyright (C) 2008 Martin Kutter. All rights reserved.
+
+Copyright (C) 2013-2015 Fred Moyer. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
