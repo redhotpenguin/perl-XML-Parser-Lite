@@ -369,11 +369,13 @@ This parser is based on "shallow parser"
 L<http://www.cs.sfu.ca/~cameron/REX.html>
 Copyright (c) 1998, Robert D. Cameron.
 
-=head1 AUTHOR
+=head1 AUTHORS
 
 Paul Kulchenko (paulclinger@yahoo.com)
 
 Martin Kutter (martin.kutter@fen-net.de)
+
+Fred Moyer (fred@redhotpenguin.com)
 
 Additional handlers supplied by Adam Leggett.
 
