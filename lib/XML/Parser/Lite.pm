@@ -64,8 +64,8 @@ sub _regexp {
     # this copyright and citation notice remains intact and that modifications
     # or additions are clearly identified.
 
-    # Modifications may be tracked on SOAP::Lite's SVN at
-    # https://soaplite.svn.sourceforge.net/svnroot/soaplite/
+    # Modifications may be tracked on XML::Parser::Lite's source code repository at
+    # https://github.com/redhotpenguin/perl-XML-Parser-Lite
     #
     use re 'eval';
     my $TextSE = "[^<]+";
