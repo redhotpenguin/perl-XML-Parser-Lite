@@ -32,7 +32,7 @@ sub setHandlers {
     my $self = shift;
 
     # allow symbolic refs, avoid "subroutine redefined" warnings
-    no strict 'refs';
+    no strict 'refs';  ## no critic
     no warnings qw(redefine);
     # clear all handlers if called without parameters
     if (not @_) {
@@ -128,7 +128,7 @@ my $REGEXP = _regexp('??');
 sub _parse_re {
     use re "eval";
     undef $^R;
-    no strict 'refs';
+    no strict 'refs';  ## no critic
     1 while $_[0] =~ m{$REGEXP}go
 };
 
