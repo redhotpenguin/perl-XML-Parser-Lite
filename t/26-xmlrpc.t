@@ -65,9 +65,7 @@ SKIP: {
 
     print "XMLRPC autodispatch and fault check test(s)...\n";
 
-    eval "use XMLRPC::Lite +autodispatch =>
-    proxy => '$proxy',
-  ; 1" or die;
+    eval "use XMLRPC::Lite +autodispatch => proxy => '$proxy', ; 1" or die;  ## no critic
 
     $r = XMLRPC->getStateName(21);
 
