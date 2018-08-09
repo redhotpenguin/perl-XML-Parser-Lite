@@ -379,8 +379,12 @@ Fred Moyer (fred@redhotpenguin.com)
 
 Additional handlers supplied by Adam Leggett.
 
+=head1 CONTRIBUTORS
+
+David Steinbrunner (dsteinbrunner@pobox.com)
+
+Neil Bowers (neil@bowers.com)
+
+Paul Cochrane (paul@liekut.de)
+
 =cut
-
-
-
-
