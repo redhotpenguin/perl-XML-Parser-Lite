@@ -1,15 +1,15 @@
 #!/bin/env perl
 
+use strict;
+use diagnostics;
+use Test;
+
 BEGIN {
     unless(grep /blib/, @INC) {
         chdir 't' if -d 't';
         unshift @INC, '../lib' if -d '../lib';
     }
 }
-
-use strict;
-use diagnostics;
-use Test;
 
 unless (eval { require XML::Parser::Lite }) {
     print "1..0 # Skip: ", $@, "\n";
