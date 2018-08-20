@@ -1,7 +1,7 @@
 Revision history for Perl module XML::Parser::Lite
 
-0.722 2018-08-?? PHRED
-    - Remove unnecessary tests
+0.722 2018-08-19 PHRED
+    - Remove unnecessary tests [github/paultcochrane for all]
     - Fix link to dist repo
     - Added continuous integration configurations
     - Minor fixes and cosmetic changes to make code adhere better to current
